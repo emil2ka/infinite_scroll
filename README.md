@@ -2,6 +2,30 @@
 
 A new Flutter project.
 
+## Структура кода
+
+Код разделён на два одинаковых по логике варианта — различаются только комментариями:
+
+- `lib/clean/` — чистый код без комментариев;
+- `lib/commented/` — тот же код с подробными объяснениями.
+
+В каждой папке 5 файлов (4 модуля + точка входа):
+
+| Файл | Что внутри |
+| --- | --- |
+| `main.dart` | точка входа, `MyApp`, `AuthGate`, сплэш |
+| `models.dart` | `Product`, `User`, `CartItem`, `JwtUtils` |
+| `services.dart` | `CacheService`, `ApiClient`, `AuthService` |
+| `providers.dart` | `AuthProvider`, `ProductProvider` |
+| `screens.dart` | все экраны и виджеты |
+
+Запуск нужной версии:
+
+```bash
+flutter run -t lib/clean/main.dart
+flutter run -t lib/commented/main.dart
+```
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
